@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pracownia architektoniczna Warszawa | WIOSNA ARCHITEKCI</title>
+<meta name="description" content="WIOSNA ARCHITEKCI - pracownia architektoniczna w Warszawie. Projekty domów, biurowców, obiektów przemysłowych i wnętrz, analizy urbanistyczne.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/hero-m-800.webp" media="(max-width:760px)" imagesrcset="img/hero-m-540.webp 540w, img/hero-m-800.webp 800w, img/hero-m-1080.webp 1080w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-1600.webp" media="(min-width:761px)" imagesrcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2200.webp 2200w" imagesizes="100vw" fetchpriority="high">
+<style>
+@font-face{font-family:"Archivo";src:url(fonts/archivo.woff2) format("woff2");font-weight:100 900;font-display:swap}
+:root{--ink:#0A0A0A;--bg:#FFFFFF;--grey:#F1F3F4;--line:#D9DDE1;--muted:#555C63;--acc:#7FA82E;--acc-d:#4A6F12;--wrap:1560px;--pad:clamp(16px,3vw,56px);--cut:13px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Archivo",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit}
+h1,h2,h3{margin:0;font-weight:800;letter-spacing:-.02em;line-height:1.08}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
+.wide{max-width:1840px;margin:0 auto;padding:0 var(--pad)}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:16px;z-index:99;background:#fff;padding:8px 12px}
+
+/* przycisk: prawa krawędź ścięta pod kątem ramienia W z logo */
+.btn{display:inline-flex;align-items:center;gap:12px;min-height:54px;padding:0 calc(26px + var(--cut)) 0 26px;font-weight:700;font-size:17px;text-decoration:none;border:0;cursor:pointer;clip-path:polygon(0 0,100% 0,calc(100% - var(--cut)) 100%,0 100%);transition:background .2s,color .2s}
+.btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2}
+.btn-w{background:#fff;color:var(--ink)}.btn-w:hover{background:var(--acc)}
+.btn-k{background:var(--ink);color:#fff}.btn-k:hover{background:var(--acc);color:var(--ink)}
+
+/* nagłówek */
+.hdr{position:fixed;inset:0 0 auto;z-index:50;color:#fff;transition:background .25s,color .25s,box-shadow .25s}
+.hdr.solid{background:#fff;color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;height:76px;max-width:1840px;margin:0 auto;padding:0 var(--pad)}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo svg{width:40px;height:32px;fill:currentColor;flex:none}
+.logo span{display:flex;flex-direction:column;align-items:flex-end;line-height:1}
+.logo b{font-size:23px;font-weight:800;letter-spacing:.01em}
+.logo i{font-style:normal;font-size:10.5px;font-weight:600;letter-spacing:.08em;margin-top:3px}
+.nav{display:flex;align-items:center;gap:34px}
+.nav a{text-decoration:none;font-weight:600;font-size:16px;padding:6px 0;border-bottom:2px solid transparent}
+.nav a:hover{border-color:var(--acc)}
+.nav .tel{font-weight:700;border:0;padding-left:20px;border-left:1px solid currentColor;border-radius:0}
+.hdr .nav .tel{border-left-color:rgba(255,255,255,.45)}.hdr.solid .nav .tel{border-left-color:var(--line)}
+.burger{display:none;width:48px;height:48px;border:0;background:none;cursor:pointer;margin-right:-10px}
+.burger span{display:block;width:26px;height:2px;background:currentColor;margin:6px auto;transition:transform .25s,opacity .2s}
+.menu-open .burger span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.menu-open .burger span:nth-child(2){opacity:0}
+.menu-open .burger span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* pierwszy ekran */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;background:#2b2f2a}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%}
+.hero picture{z-index:0}
+.hero picture img{object-fit:cover;object-position:50% 60%}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.42) 0,rgba(0,0,0,0) 170px),linear-gradient(0deg,rgba(0,0,0,.78) 0,rgba(0,0,0,.5) 34%,rgba(0,0,0,0) 66%);pointer-events:none;z-index:1}
+.hero-c{position:relative;z-index:2;width:100%;max-width:1840px;margin:0 auto;padding:120px var(--pad) clamp(40px,7vh,84px)}
+.hero h1{font-size:clamp(34px,4.7vw,76px);max-width:15.5em;max-width:min(15.5em,1060px)}
+.hero .lead{font-size:clamp(17px,1.35vw,21px);max-width:40em;margin-top:22px;color:rgba(255,255,255,.92)}
+.hero .act{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;margin-top:32px}
+.hero .kont{font-size:16px;color:rgba(255,255,255,.88)}
+.hero .kont a{text-decoration:none;font-weight:700;color:#fff}
+.hero .cap{position:absolute;z-index:2;right:var(--pad);bottom:20px;font-size:13px;color:rgba(255,255,255,.75)}
+
+/* nagłówki sekcji: kreska konstrukcyjna zakończona znakiem W */
+.hrow{display:flex;align-items:flex-end;gap:24px;margin-bottom:clamp(28px,4vw,48px)}
+.hrow h2{font-size:clamp(30px,3.4vw,50px);flex:none;max-width:100%}
+.hrow .rule{flex:1;display:flex;align-items:center;gap:10px;padding-bottom:12px;min-width:40px}
+.hrow .rule::before{content:"";flex:1;height:1px;background:currentColor;opacity:.25}
+.hrow .rule svg{width:22px;height:18px;fill:var(--acc);flex:none}
+.sub{font-size:clamp(17px,1.3vw,20px);color:var(--muted);max-width:44em;margin:-14px 0 clamp(28px,4vw,44px)}
+
+/* pracownia + zakres */
+.sec{padding:clamp(64px,9vw,128px) 0}
+section,.arch{scroll-margin-top:70px}
+.intro{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(28px,5vw,96px);align-items:start;margin-bottom:clamp(44px,6vw,80px)}
+.intro .big{font-size:clamp(22px,2.1vw,31px);line-height:1.32;font-weight:600;letter-spacing:-.01em}
+.intro .txt p+p{margin-top:14px}
+.intro .txt{color:var(--muted)}
+.intro .sig{margin-top:22px;color:var(--ink);font-weight:700}
+.intro .sig span{display:block;font-weight:400;color:var(--muted)}
+.zak{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2vw,28px)}
+.zak figure{margin:0}
+.zak .zi{aspect-ratio:4/3;overflow:hidden;background:var(--grey)}
+.zak img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.zak figure:hover img{transform:scale(1.03)}
+.zak h3{font-size:21px;margin:18px 0 8px;display:flex;gap:10px;align-items:baseline}
+.zak p{color:var(--muted);font-size:16px}
+
+/* projekty */
+.proj{background:var(--grey)}
+.filt{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+.filt button{border:1px solid var(--line);background:#fff;min-height:44px;padding:0 20px;font-weight:600;font-size:15px;cursor:pointer;transition:background .2s,border-color .2s}
+.filt button:hover{border-color:var(--ink)}
+.filt button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.filt button span{color:var(--acc);margin-left:6px;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(28px,3vw,48px) clamp(20px,2.4vw,40px)}
+.pc{background:#fff;display:flex;flex-direction:column}
+.pc[hidden]{display:none}
+.pc-wide{grid-column:1/-1;display:grid;grid-template-columns:1.7fr 1fr}
+.car{position:relative;overflow:hidden;background:#e4e7ea}
+.track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;cursor:grab;touch-action:pan-x pan-y}
+.track::-webkit-scrollbar{display:none}
+.track.drag{scroll-snap-type:none;cursor:grabbing}
+.sl{flex:0 0 100%;scroll-snap-align:start;aspect-ratio:3/2;border:0;padding:0;margin:0;background:none;cursor:zoom-in;display:block}
+.sl img{width:100%;height:100%;object-fit:cover;pointer-events:none;user-select:none;-webkit-user-drag:none}
+.pc-wide .sl{aspect-ratio:16/10}
+.ar{position:absolute;top:50%;width:48px;height:48px;margin-top:-24px;border:0;background:rgba(255,255,255,.92);display:grid;place-items:center;cursor:pointer;opacity:0;transition:opacity .2s,background .2s}
+.ar svg{width:20px;height:20px;fill:none;stroke:var(--ink);stroke-width:2}
+.ar:hover{background:#fff}
+.ar-p{left:14px}.ar-n{right:14px}
+.ar[disabled]{opacity:0!important;pointer-events:none}
+@media (hover:hover){.car:hover .ar{opacity:1}}
+.cnt{position:absolute;left:0;bottom:0;background:var(--ink);color:#fff;font-size:13px;font-weight:600;padding:7px 26px 7px 14px;clip-path:polygon(0 0,100% 0,calc(100% - 9px) 100%,0 100%);pointer-events:none}
+.cnt b{font-weight:700}
+.pc-t{padding:24px clamp(20px,2vw,32px) 30px}
+.pc-wide .pc-t{padding:clamp(24px,3vw,48px);display:flex;flex-direction:column;justify-content:center}
+.pc h3{font-size:clamp(25px,2vw,32px)}
+.pc-wide h3{font-size:clamp(28px,2.6vw,42px)}
+.pc-typ{color:var(--acc-d);font-weight:700;margin-top:6px}
+.pc-m{display:flex;flex-wrap:wrap;gap:4px 0;margin-top:14px;font-size:15px;color:var(--muted)}
+.pc-m span:not(:last-child)::after{content:"";display:inline-block;width:1px;height:12px;background:var(--line);margin:0 12px;vertical-align:-1px}
+.pc-d{margin-top:14px}
+.pc-z{margin-top:12px;font-size:14.5px;color:var(--muted)}
+.more{display:none;margin-top:28px;width:100%;justify-content:space-between}
+
+/* pozostałe projekty: pas w kontenerze */
+.arch{margin-top:clamp(56px,7vw,96px)}
+.arch-h{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:22px}
+.arch-h h3{font-size:clamp(24px,2.2vw,32px)}
+.arch-h p{color:var(--muted);margin-top:6px}
+.sarr{display:flex;gap:8px;flex:none}
+.sarr button{width:48px;height:48px;border:1px solid var(--ink);background:#fff;display:grid;place-items:center;cursor:pointer}
+.sarr button:hover{background:var(--ink)}.sarr button:hover svg{stroke:#fff}
+.sarr button[disabled]{opacity:.3;pointer-events:none}
+.sarr svg{width:20px;height:20px;fill:none;stroke:var(--ink);stroke-width:2}
+.strip{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab}
+.strip::-webkit-scrollbar{display:none}
+.strip.drag{scroll-snap-type:none;cursor:grabbing}
+.ac{flex:0 0 calc((100% - 3*20px)/4);scroll-snap-align:start;border:0;padding:0;background:none;text-align:left;cursor:zoom-in}
+.ac-i{display:block;aspect-ratio:4/3;overflow:hidden;background:#e4e7ea}
+.ac img{width:100%;height:100%;object-fit:cover;pointer-events:none;user-select:none;-webkit-user-drag:none;transition:transform .6s}
+.ac:hover img{transform:scale(1.03)}
+.ac-t{display:block;font-weight:700;font-size:18px;margin-top:14px;line-height:1.25}
+.ac-d{display:block;font-size:15px;color:var(--muted);margin-top:2px}
+
+/* ciemna sekcja */
+.dark{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.dark .hrow .rule::before{opacity:.35}
+.dk{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,110px);align-items:center;position:relative}
+.dk .p1{font-size:clamp(18px,1.4vw,21px);color:rgba(255,255,255,.86);max-width:34em}
+.steps{list-style:none;margin:30px 0 0;padding:0;border-top:1px solid rgba(255,255,255,.18)}
+.steps li{padding:17px 0;border-bottom:1px solid rgba(255,255,255,.18);display:grid;grid-template-columns:minmax(0,15em) 1fr;gap:6px 24px}
+.steps b{font-weight:700}
+.steps span{color:rgba(255,255,255,.7);font-size:16px}
+.inw{margin-top:28px;color:rgba(255,255,255,.7);font-size:16px}
+.inw b{color:#fff;font-weight:600}
+.dk-img{margin:0;position:relative}
+.dk-img img{width:100%;height:auto;aspect-ratio:5/4;object-fit:cover}
+.dk-img figcaption{font-size:14px;color:rgba(255,255,255,.65);margin-top:12px}
+.dk-w{position:absolute;right:-6%;top:-60px;width:min(560px,52vw);opacity:.07;pointer-events:none}
+.dk-w path{fill:none;stroke:#fff;stroke-width:2}
+.dk-w line{stroke:#fff;stroke-width:1.5}
+
+/* kontakt */
+.kt{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(32px,5vw,96px)}
+.kd dl{margin:0;display:grid;gap:22px}
+.kd dt{font-size:14px;color:var(--muted);margin-bottom:2px}
+.kd dd{margin:0;font-size:19px;font-weight:600;line-height:1.45}
+.kd dd a{text-decoration:none;border-bottom:2px solid var(--acc)}
+.map{margin-top:32px;aspect-ratio:16/10;background:var(--grey);position:relative}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1) contrast(1.05)}
+.map span{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:15px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px;align-content:start}
+.f{display:flex;flex-direction:column;gap:6px}
+.f.full{grid-column:1/-1}
+label{font-size:14px;font-weight:600}
+input,select,textarea{font:inherit;font-size:16px;border:1px solid #BFC5CB;background:#fff;border-radius:0;padding:13px 14px;min-height:52px;color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--ink);outline-offset:-1px;border-color:var(--ink)}
+textarea{min-height:140px;resize:vertical}
+.zg{grid-column:1/-1;display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted)}
+.zg input{width:20px;height:20px;min-height:0;margin:2px 0 0;flex:none;accent-color:var(--ink)}
+.fsend{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:16px}
+.fmsg{font-size:15px;color:var(--acc-d);font-weight:600}
+
+/* stopka */
+.ft{background:var(--ink);color:#C9CDD1;padding:64px 0 28px;font-size:15.5px}
+.ft-g{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:32px}
+.ft .logo{color:#fff}
+.ft h4{margin:0 0 10px;color:#fff;font-size:15px;font-weight:700}
+.ft p{line-height:1.6}
+.ft a{text-decoration:none}.ft a:hover{color:#fff}
+.ft nav{display:flex;flex-direction:column;gap:6px}
+.ft-b{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 24px;align-items:center;border-top:1px solid rgba(255,255,255,.14);margin-top:44px;padding-top:22px;font-size:14px}
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:90;background:rgba(10,10,10,.96);display:none;align-items:center;justify-content:center;touch-action:pan-y}
+.lb.on{display:flex}
+.lb img{max-width:calc(100vw - 32px);max-height:calc(100vh - 120px);max-height:calc(100svh - 120px);object-fit:contain}
+.lb button{position:absolute;border:0;background:rgba(255,255,255,.1);color:#fff;width:52px;height:52px;display:grid;place-items:center;cursor:pointer}
+.lb button:hover{background:rgba(255,255,255,.22)}
+.lb svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:2}
+.lb .x{top:14px;right:14px}.lb .lp{left:14px;top:50%;margin-top:-26px}.lb .ln{right:14px;top:50%;margin-top:-26px}
+.lb-cap{position:absolute;left:0;right:0;bottom:18px;text-align:center;color:#ddd;font-size:15px;padding:0 70px}
+
+/* menu mobilne */
+@media (max-width:1023px){
+  .burger{display:block}
+  .nav{position:fixed;inset:76px 0 0;background:#fff;color:var(--ink);flex-direction:column;align-items:stretch;gap:0;padding:12px var(--pad) 40px;transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .2s,transform .2s,visibility .2s}
+  .menu-open .nav{opacity:1;visibility:visible;transform:none}
+  .menu-open .hdr{background:#fff;color:var(--ink)}
+  .nav a{font-size:28px;font-weight:800;padding:16px 0;border-bottom:1px solid var(--line)}
+  .nav .tel{border-left:0!important;padding-left:0;font-size:22px;margin-top:20px;border-bottom:0}
+  .intro{grid-template-columns:1fr}
+  .zak{grid-template-columns:repeat(2,1fr)}
+  .pc-wide{grid-template-columns:1fr}
+  .pc-wide .sl{aspect-ratio:3/2}
+  .dk{grid-template-columns:1fr}
+  .kt{grid-template-columns:1fr}
+  .ft-g{grid-template-columns:1fr 1fr}
+  .ac{flex-basis:calc((100% - 20px)/2.3)}
+}
+@media (min-width:1024px) and (max-width:1279px){.ac{flex-basis:calc((100% - 2*20px)/2.6)}}
+@media (min-width:1280px) and (max-width:1699px){.ac{flex-basis:calc((100% - 2*20px)/3)}}
+@media (max-width:760px){
+  body{font-size:16.5px}
+  .hdr-in{height:66px}
+  .nav{inset:66px 0 0}
+  .logo svg{width:34px;height:27px}
+  .logo b{font-size:20px}.logo i{font-size:9.5px}
+  .hero picture img{object-position:38% 50%}
+  .hero-c{padding-top:100px;padding-bottom:28px}
+  .hero::before{background:linear-gradient(180deg,rgba(0,0,0,.45) 0,rgba(0,0,0,0) 140px),linear-gradient(0deg,rgba(0,0,0,.84) 0,rgba(0,0,0,.6) 40%,rgba(0,0,0,0) 72%)}
+  .hero .lead{margin-top:16px}
+  .hero .act{margin-top:26px;gap:14px}
+  .hero .btn{width:100%;justify-content:space-between}
+  .hero .cap{display:none}
+  .hrow{gap:14px}
+  .hrow .rule{display:none}
+  .grid{grid-template-columns:1fr}
+  .grid:not(.all) .pc:nth-child(n+5){display:none}
+  .more{display:inline-flex}
+  .zak{grid-template-columns:1fr 1fr;gap:20px 14px}
+  .zak h3{font-size:18px;margin-top:12px}
+  .zak p{font-size:15px}
+  .ac{flex-basis:80%}
+  .strip{gap:14px}
+  .sarr{display:none}
+  .steps li{grid-template-columns:1fr}
+  form{grid-template-columns:1fr}
+  .ft-g{gap:28px 18px}
+  .ft-g>div:first-child{grid-column:1/-1}
+  .lb .lp,.lb .ln{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <a class="logo" href="#top" aria-label="WIOSNA ARCHITEKCI - strona główna">
+      <svg viewBox="0 56 512 413" aria-hidden="true"><path d="M4 60H121L162 224 201 89H311L350 224 391 60H508V288H421L386 465H295L256 324 217 465H126L91 288H4Z"/></svg>
+      <span><b>WIOSNA</b><i>ARCHITEKCI</i></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Menu główne">
+      <a href="#projekty">Projekty</a>
+      <a href="#zakres">Zakres</a>
+      <a href="#pracownia">Pracownia</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="tel" href="tel:+48506570881">+48 506 570 881</a>
+    </nav>
+    <button class="burger" id="burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="tresc">
+<section class="hero" id="top">
+  <picture>
+    <source media="(max-width:760px)" srcset="img/hero-m-540.webp 540w, img/hero-m-800.webp 800w, img/hero-m-1080.webp 1080w" sizes="100vw">
+    <img src="img/hero-1600.webp" srcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2200.webp 2200w" sizes="100vw" width="1600" height="1200" fetchpriority="high" decoding="async" alt="Czarny, parterowy dom wśród sosen zaprojektowany przez WIOSNA ARCHITEKCI">
+  </picture>
+  <div class="hero-c">
+    <h1>Pracownia architektoniczna w&nbsp;Warszawie - forma, która wynika z&nbsp;miejsca</h1>
+    <p class="lead">Projektujemy domy, biurowce, obiekty przemysłowe i wnętrza. Kształt budynku wyznacza u nas działka, sąsiedztwo i to, jak inwestor chce z niego korzystać.</p>
+    <div class="act">
+      <a class="btn btn-w" href="#projekty">Zobacz projekty <svg viewBox="0 0 20 20"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
+      <p class="kont">tel. <a href="tel:+48506570881">506 570 881</a> &nbsp;·&nbsp; <a href="mailto:biuro@wsna.pl">biuro@wsna.pl</a></p>
+    </div>
+  </div>
+  <p class="cap">dom wśród drzew, mazowieckie</p>
+</section>
+
+<section class="sec" id="zakres">
+  <div class="wrap">
+    <div class="intro" id="pracownia-intro">
+      <p class="big">Prowadzimy cały proces projektowy: od analizy działki i koncepcji, przez wielobranżowy projekt budowlany i wykonawczy, po projekt wnętrz.</p>
+      <div class="txt">
+        <p>Pracujemy z polskimi i zagranicznymi inwestorami, przy obiektach o bardzo różnej skali: od mieszkania 30 m<sup>2</sup> po zespół przemysłowy z magazynem wysokiego składowania.</p>
+        <p>Przed zakupem działki lub startem inwestycji przygotowujemy analizy architektoniczno-urbanistyczne, żeby było wiadomo, co i w jakiej skali da się na niej zbudować.</p>
+        <p class="sig">mgr inż. arch. Piotr Wiosna<span>architekt IARP</span></p>
+      </div>
+    </div>
+    <div class="hrow"><h2>Zakres</h2><span class="rule"><svg viewBox="0 56 512 413" aria-hidden="true"><path d="M4 60H121L162 224 201 89H311L350 224 391 60H508V288H421L386 465H295L256 324 217 465H126L91 288H4Z"/></svg></span></div>
+    <div class="zak">
+      <figure><div class="zi"><img src="img/z-arch-700.webp" width="700" height="525" loading="lazy" decoding="async" alt="Dom z cegły i drewna na planie litery L, Janów"></div>
+        <h3>Domy</h3><p>Domy jednorodzinne i bliźniacze, od koncepcji po projekt budowlano-wykonawczy.</p></figure>
+      <figure><div class="zi"><img src="img/z-prz-700.webp" width="700" height="525" loading="lazy" decoding="async" alt="Szklany biurowiec BF w Jatnem"></div>
+        <h3>Biura i przemysł</h3><p>Biurowce przy zakładach, hale, magazyny i całe zespoły produkcyjne.</p></figure>
+      <figure><div class="zi"><img src="img/z-wn-700.webp" width="700" height="388" loading="lazy" decoding="async" alt="Jasna kuchnia z kamiennym blatem, projekt wnętrz w Lublinie"></div>
+        <h3>Wnętrza</h3><p>Mieszkania, domy i biura: układ, materiały, zabudowy i oświetlenie.</p></figure>
+      <figure><div class="zi"><img src="img/z-urb-700.webp" width="700" height="388" loading="lazy" decoding="async" alt="Zespół domów w zabudowie bliźniaczej przy wspólnej drodze"></div>
+        <h3>Analizy i urbanistyka</h3><p>Analizy działek przed zakupem, zagospodarowanie terenu z drogami i infrastrukturą.</p></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec proj" id="projekty">
+  <div class="wrap">
+    <div class="hrow"><h2>Projekty</h2><span class="rule"><svg viewBox="0 56 512 413" aria-hidden="true"><path d="M4 60H121L162 224 201 89H311L350 224 391 60H508V288H421L386 465H295L256 324 217 465H126L91 288H4Z"/></svg></span></div>
+    <p class="sub">Wybór z ponad 30 projektów pracowni. Zdjęcia w kartach przesuwa się palcem lub myszą, a kliknięcie pokazuje całe ujęcie.</p>
+    <div class="grid" id="grid">
+<article class="pc pc-wide" data-g="biura">
+  <div class="car" data-title="biurowiec BF">
+    <div class="track"><button class="sl" type="button" data-big="img/bf-1-1600.webp" aria-label="Powiększ zdjęcie 1 z 5: biurowiec BF"><img src="img/bf-1-800.webp" width="800" height="600" loading="lazy" decoding="async" alt="biurowiec BF, budynek biurowy, zdjęcie 1"></button><button class="sl" type="button" data-big="img/bf-2-1600.webp" aria-label="Powiększ zdjęcie 2 z 5: biurowiec BF"><img src="img/bf-2-800.webp" width="800" height="600" loading="lazy" decoding="async" alt="biurowiec BF, budynek biurowy, zdjęcie 2"></button><button class="sl" type="button" data-big="img/bf-3-1600.webp" aria-label="Powiększ zdjęcie 3 z 5: biurowiec BF"><img src="img/bf-3-800.webp" width="800" height="600" loading="lazy" decoding="async" alt="biurowiec BF, budynek biurowy, zdjęcie 3"></button><button class="sl" type="button" data-big="img/bf-4-1600.webp" aria-label="Powiększ zdjęcie 4 z 5: biurowiec BF"><img src="img/bf-4-800.webp" width="800" height="600" loading="lazy" decoding="async" alt="biurowiec BF, budynek biurowy, zdjęcie 4"></button><button class="sl" type="button" data-big="img/bf-5-1600.webp" aria-label="Powiększ zdjęcie 5 z 5: biurowiec BF"><img src="img/bf-5-800.webp" width="800" height="600" loading="lazy" decoding="async" alt="biurowiec BF, budynek biurowy, zdjęcie 5"></button></div>
+    <button class="ar ar-p" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 20 20"><path d="M12.5 4 6.5 10l6 6"/></svg></button>
+    <button class="ar ar-n" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 20 20"><path d="M7.5 4l6 6-6 6"/></svg></button>
+    <span class="cnt"><b>1</b> / 5</span>
+  </div>
+  <div class="pc-t">
+    <h3>biurowiec BF</h3>
+    <p class="pc-typ">budynek biurowy</p>
+    <p class="pc-m"><span>Jatne, gm. Celestynów</span><span>projekt 2023</span><span>1 836,80 m<sup>2</sup></span></p>
+    <p class="pc-d">Trzykondygnacyjny biurowiec z łącznikiem do hali zakładu. Fasady z aluminiowo-szklanych ścian kurtynowych w równym, modułowym rytmie.</p>
+    <p class="pc-z">projekt budowlany, wykonawczy i techniczny, inwestor: Bogucki Folie</p>
+  </div>
+</article>
+<article class="pc" data-g="wnetrza">
+  <div class="car" data-title="aura verde">
+    <div class="track"><button class="sl" type="button" data-big="img/aura-1-1600.webp" aria-label="Powiększ zdjęcie 1 z 5: aura verde"><img src="img/aura-1-800.webp" width="800" height="445" loading="lazy" decoding="async" alt="aura verde, projekt wnętrz, zdjęcie 1"></button><button class="sl" type="button" data-big="img/aura-2-1600.webp" aria-label="Powiększ zdjęcie 2 z 5: aura verde"><img src="img/aura-2-800.webp" width="800" height="444" loading="lazy" decoding="async" alt="aura verde, projekt wnętrz, zdjęcie 2"></button><button class="sl" type="button" data-big="img/aura-3-1600.webp" aria-label="Powiększ zdjęcie 3 z 5: aura verde"><img src="img/aura-3-800.webp" width="800" height="444" loading="lazy" decoding="async" alt="aura verde, projekt wnętrz, zdjęcie 3"></button><button class="sl" type="button" data-big="img/aura-4-1600.webp" aria-label="Powiększ zdjęcie 4 z 5: aura verde"><img src="img/aura-4-800.webp" width="800" height="441" loading="lazy" decoding="async" alt="aura verde, projekt wnętrz, zdjęcie 4"></button><button class="sl" type="button" data-big="img/aura-5-1600.webp" aria-label="Powiększ zdjęcie 5 z 5: aura verde"><img src="img/aura-5-800.webp" width="800" height="444" loading="lazy" decoding="async" alt="aura verde, projekt wnętrz, zdjęcie 5"></button></div>
+    <button class="ar ar-p" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 20 20"><path d="M12.5 4 6.5 10l6 6"/></svg></button>
+    <button class="ar ar-n" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 20 20"><path d="M7.5 4l6 6-6 6"/></svg></button>
+    <span class="cnt"><b>1</b> / 5</span>
+  </div>
+  <div class="pc-t">
+    <h3>aura verde</h3>
+    <p class="pc-typ">projekt wnętrz</p>
+    <p class="pc-m"><span>Lublin</span><span>projekt 2026</span><span>44 m<sup>2</sup></span></p>
+    <p class="pc-d">Mieszkanie w duchu organic modern: jasne drewno, kamień z wyraźnym użyleniem i zielony kominek jako środek strefy dziennej.</p>
+    <p class="pc-z">współpraca: Agnieszka Nejman</p>
+  </div>
+</article>
+<article class="pc" data-g="domy">
+  <div class="car" data-title="dom wśród drzew">
+    <div class="track"><button class="sl" type="button" data-big="img/drzewa-1-1600.webp" aria-label="Powiększ zdjęcie 1 z 5: dom wśród drzew"><img src="img/drzewa-1-800.webp" width="800" height="600" loading="lazy" decoding="async" alt="dom wśród drzew, dom jednorodzinny, zdjęcie 1"></button><button class="sl" type="button" data-big="img/drzewa-2-1600.webp" aria-label="Powiększ zdjęcie 2 z 5: dom wśród drzew"><img src="img/drzewa-2-800.webp" width="800" height="600" loading="lazy" decoding="async" alt="dom wśród drzew, dom jednorodzinny, zdjęcie 2"></button><button class="sl" type="button" data-big="img/drzewa-3-1600.webp" aria-label="Powiększ zdjęcie 3 z 5: dom wśród drzew"><img src="img/drzewa-3-800.webp" width="800" height="600" loading="lazy" decoding="async" alt="dom wśród drzew, dom jednorodzinny, zdjęcie 3"></button><button class="sl" type="button" data-big="img/drzewa-4-1600.webp" aria-label="Powiększ zdjęcie 4 z 5: dom wśród drzew"><img src="img/drzewa-4-800.webp" width="800" height="600" loading="lazy" decoding="async" alt="dom wśród drzew, dom jednorodzinny, zdjęcie 4"></button><button class="sl" type="button" data-big="img/drzewa-5-1600.webp" aria-label="Powiększ zdjęcie 5 z 5: dom wśród drzew"><img src="img/drzewa-5-800.webp" width="800" height="600" loading="lazy" decoding="async" alt="dom wśród drzew, dom jednorodzinny, zdjęcie 5"></button></div>
+    <button class="ar ar-p" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 20 20"><path d="M12.5 4 6.5 10l6 6"/></svg></button>
+    <button class="ar ar-n" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 20 20"><path d="M7.5 4l6 6-6 6"/></svg></button>
+    <span class="cnt"><b>1</b> / 5</span>
+  </div>
+  <div class="pc-t">
+    <h3>dom wśród drzew</h3>
+    <p class="pc-typ">dom jednorodzinny</p>
+    <p class="pc-m"><span>mazowieckie</span><span>projekt 2022</span><span>180 m<sup>2</sup></span></p>
+    <p class="pc-d">Dwa przenikające się pawilony w lesie sosnowym. Panoramiczne przeszklenia otwierają strefę dzienną i prywatną na drzewa.</p>
+    <p class="pc-z">wielobranżowy projekt budowlany</p>
+  </div>
+</article>
+<article class="pc" data-g="biura">
+  <div class="car" data-title="biurowiec O">
+    <div class="track"><button class="sl" type="button" data-big="img/bo-1-1600.webp" aria-label="Powiększ zdjęcie 1 z 4: biurowiec O"><img src="img/bo-1-800.webp" width="800" height="509" loading="lazy" decoding="async" alt="biurowiec O, budynek biurowy, zdjęcie 1"></button><button class="sl" type="button" data-big="img/bo-2-1600.webp" aria-label="Powiększ zdjęcie 2 z 4: biurowiec O"><img src="img/bo-2-800.webp" width="800" height="509" loading="lazy" decoding="async" alt="biurowiec O, budynek biurowy, zdjęcie 2"></button><button class="sl" type="button" data-big="img/bo-3-1600.webp" aria-label="Powiększ zdjęcie 3 z 4: biurowiec O"><img src="img/bo-3-800.webp" width="800" height="509" loading="lazy" decoding="async" alt="biurowiec O, budynek biurowy, zdjęcie 3"></button><button class="sl" type="button" data-big="img/bo-4-1600.webp" aria-label="Powiększ zdjęcie 4 z 4: biurowiec O"><img src="img/bo-4-800.webp" width="800" height="509" loading="lazy" decoding="async" alt="biurowiec O, budynek biurowy, zdjęcie 4"></button></div>
+    <button class="ar ar-p" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 20 20"><path d="M12.5 4 6.5 10l6 6"/></svg></button>
+    <button class="ar ar-n" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 20 20"><path d="M7.5 4l6 6-6 6"/></svg></button>
+    <span class="cnt"><b>1</b> / 4</span>
+  </div>
+  <div class="pc-t">
+    <h3>biurowiec O</h3>
+    <p class="pc-typ">budynek biurowy</p>
+    <p class="pc-m"><span>Kołbiel</span><span>2 500 m<sup>2</sup></span></p>
+    <p class="pc-d">Butikowy biurowiec przy zakładzie produkcyjnym: szklana bryła częściowo otoczona fasadą z betonu architektonicznego z wysokimi oknami.</p>
+    <p class="pc-z">koncepcja architektoniczna, inwestor: Piekarnia Oskroba</p>
+  </div>
+</article>
+<article class="pc" data-g="biura">
+  <div class="car" data-title="linearna produkcja">
+    <div class="track"><button class="sl" type="button" data-big="img/lin-1-1600.webp" aria-label="Powiększ zdjęcie 1 z 5: linearna produkcja"><img src="img/lin-1-800.webp" width="800" height="450" loading="lazy" decoding="async" alt="linearna produkcja, zespół przemysłowy, zdjęcie 1"></button><button class="sl" type="button" data-big="img/lin-2-1600.webp" aria-label="Powiększ zdjęcie 2 z 5: linearna produkcja"><img src="img/lin-2-800.webp" width="800" height="444" loading="lazy" decoding="async" alt="linearna produkcja, zespół przemysłowy, zdjęcie 2"></button><button class="sl" type="button" data-big="img/lin-3-1600.webp" aria-label="Powiększ zdjęcie 3 z 5: linearna produkcja"><img src="img/lin-3-800.webp" width="800" height="450" loading="lazy" decoding="async" alt="linearna produkcja, zespół przemysłowy, zdjęcie 3"></button><button class="sl" type="button" data-big="img/lin-4-1600.webp" aria-label="Powiększ zdjęcie 4 z 5: linearna produkcja"><img src="img/lin-4-800.webp" width="800" height="444" loading="lazy" decoding="async" alt="linearna produkcja, zespół przemysłowy, zdjęcie 4"></button><button class="sl" type="button" data-big="img/lin-5-1600.webp" aria-label="Powiększ zdjęcie 5 z 5: linearna produkcja"><img src="img/lin-5-800.webp" width="800" height="450" loading="lazy" decoding="async" alt="linearna produkcja, zespół przemysłowy, zdjęcie 5"></button></div>
+    <button class="ar ar-p" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 20 20"><path d="M12.5 4 6.5 10l6 6"/></svg></button>
+    <button class="ar ar-n" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 20 20"><path d="M7.5 4l6 6-6 6"/></svg></button>
+    <span class="cnt"><b>1</b> / 5</span>
+  </div>
+  <div class="pc-t">
+    <h3>linearna produkcja</h3>
+    <p class="pc-typ">zespół przemysłowy</p>
+    <p class="pc-m"><span>Jatne, gm. Celestynów</span><span>projekt 2025</span><span>5 549,80 m<sup>2</sup></span></p>
+    <p class="pc-d">Biurowiec z zapleczem, hala produkcyjno-magazynowa i magazyn wysokiego składowania razem z drogami, placem manewrowym i infrastrukturą.</p>
+    <p class="pc-z">projekt koncepcyjny, inwestor: Polimergraf</p>
+  </div>
+</article>
+<article class="pc" data-g="domy">
+  <div class="car" data-title="dom efektywny">
+    <div class="track"><button class="sl" type="button" data-big="img/janow-1-1600.webp" aria-label="Powiększ zdjęcie 1 z 5: dom efektywny"><img src="img/janow-1-800.webp" width="800" height="600" loading="lazy" decoding="async" alt="dom efektywny, dom jednorodzinny, zdjęcie 1"></button><button class="sl" type="button" data-big="img/janow-2-1600.webp" aria-label="Powiększ zdjęcie 2 z 5: dom efektywny"><img src="img/janow-2-800.webp" width="800" height="600" loading="lazy" decoding="async" alt="dom efektywny, dom jednorodzinny, zdjęcie 2"></button><button class="sl" type="button" data-big="img/janow-3-1600.webp" aria-label="Powiększ zdjęcie 3 z 5: dom efektywny"><img src="img/janow-3-800.webp" width="800" height="600" loading="lazy" decoding="async" alt="dom efektywny, dom jednorodzinny, zdjęcie 3"></button><button class="sl" type="button" data-big="img/janow-4-1600.webp" aria-label="Powiększ zdjęcie 4 z 5: dom efektywny"><img src="img/janow-4-800.webp" width="800" height="600" loading="lazy" decoding="async" alt="dom efektywny, dom jednorodzinny, zdjęcie 4"></button><button class="sl" type="button" data-big="img/janow-5-1600.webp" aria-label="Powiększ zdjęcie 5 z 5: dom efektywny"><img src="img/janow-5-800.webp" width="800" height="600" loading="lazy" decoding="async" alt="dom efektywny, dom jednorodzinny, zdjęcie 5"></button></div>
+    <button class="ar ar-p" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 20 20"><path d="M12.5 4 6.5 10l6 6"/></svg></button>
+    <button class="ar ar-n" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 20 20"><path d="M7.5 4l6 6-6 6"/></svg></button>
+    <span class="cnt"><b>1</b> / 5</span>
+  </div>
+  <div class="pc-t">
+    <h3>dom efektywny</h3>
+    <p class="pc-typ">dom jednorodzinny</p>
+    <p class="pc-m"><span>Janów, gm. Stare Babice</span><span>projekt 2019</span><span>167,96 m<sup>2</sup></span></p>
+    <p class="pc-d">Dom na planie odwróconej litery L: dwie proste bryły z dachami dwuspadowymi, połączone niskim łącznikiem.</p>
+    <p class="pc-z">wielobranżowy projekt budowlano-wykonawczy</p>
+  </div>
+</article>
+<article class="pc" data-g="domy">
+  <div class="car" data-title="domy dla Otwocka">
+    <div class="track"><button class="sl" type="button" data-big="img/otw-1-1600.webp" aria-label="Powiększ zdjęcie 1 z 6: domy dla Otwocka"><img src="img/otw-1-800.webp" width="800" height="445" loading="lazy" decoding="async" alt="domy dla Otwocka, Klasyk, Modern, Natur, zdjęcie 1"></button><button class="sl" type="button" data-big="img/otw-2-1600.webp" aria-label="Powiększ zdjęcie 2 z 6: domy dla Otwocka"><img src="img/otw-2-800.webp" width="800" height="445" loading="lazy" decoding="async" alt="domy dla Otwocka, Klasyk, Modern, Natur, zdjęcie 2"></button><button class="sl" type="button" data-big="img/otw-3-1600.webp" aria-label="Powiększ zdjęcie 3 z 6: domy dla Otwocka"><img src="img/otw-3-800.webp" width="800" height="445" loading="lazy" decoding="async" alt="domy dla Otwocka, Klasyk, Modern, Natur, zdjęcie 3"></button><button class="sl" type="button" data-big="img/otw-4-1600.webp" aria-label="Powiększ zdjęcie 4 z 6: domy dla Otwocka"><img src="img/otw-4-800.webp" width="800" height="450" loading="lazy" decoding="async" alt="domy dla Otwocka, Klasyk, Modern, Natur, zdjęcie 4"></button><button class="sl" type="button" data-big="img/otw-5-1600.webp" aria-label="Powiększ zdjęcie 5 z 6: domy dla Otwocka"><img src="img/otw-5-800.webp" width="800" height="450" loading="lazy" decoding="async" alt="domy dla Otwocka, Klasyk, Modern, Natur, zdjęcie 5"></button><button class="sl" type="button" data-big="img/otw-6-1600.webp" aria-label="Powiększ zdjęcie 6 z 6: domy dla Otwocka"><img src="img/otw-6-800.webp" width="800" height="450" loading="lazy" decoding="async" alt="domy dla Otwocka, Klasyk, Modern, Natur, zdjęcie 6"></button></div>
+    <button class="ar ar-p" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 20 20"><path d="M12.5 4 6.5 10l6 6"/></svg></button>
+    <button class="ar ar-n" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 20 20"><path d="M7.5 4l6 6-6 6"/></svg></button>
+    <span class="cnt"><b>1</b> / 6</span>
+  </div>
+  <div class="pc-t">
+    <h3>domy dla Otwocka</h3>
+    <p class="pc-typ">Klasyk, Modern, Natur</p>
+    <p class="pc-m"><span>Otwock</span><span>projekt 2023</span><span>87-91 m<sup>2</sup></span></p>
+    <p class="pc-d">Trzy projekty domów do 70 m<sup>2</sup> zabudowy, z detalami elewacji nawiązującymi do otwockiego stylu świdermajer.</p>
+    <p class="pc-z">wielobranżowe projekty budowlane, zamawiający: Urząd Miasta Otwocka</p>
+  </div>
+</article>
+<article class="pc" data-g="domy">
+  <div class="car" data-title="liniowy dom podwójny">
+    <div class="track"><button class="sl" type="button" data-big="img/blizn-1-1600.webp" aria-label="Powiększ zdjęcie 1 z 4: liniowy dom podwójny"><img src="img/blizn-1-800.webp" width="800" height="444" loading="lazy" decoding="async" alt="liniowy dom podwójny, dom w zabudowie bliźniaczej, zdjęcie 1"></button><button class="sl" type="button" data-big="img/blizn-2-1600.webp" aria-label="Powiększ zdjęcie 2 z 4: liniowy dom podwójny"><img src="img/blizn-2-800.webp" width="800" height="444" loading="lazy" decoding="async" alt="liniowy dom podwójny, dom w zabudowie bliźniaczej, zdjęcie 2"></button><button class="sl" type="button" data-big="img/blizn-3-1600.webp" aria-label="Powiększ zdjęcie 3 z 4: liniowy dom podwójny"><img src="img/blizn-3-800.webp" width="800" height="444" loading="lazy" decoding="async" alt="liniowy dom podwójny, dom w zabudowie bliźniaczej, zdjęcie 3"></button><button class="sl" type="button" data-big="img/blizn-4-1600.webp" aria-label="Powiększ zdjęcie 4 z 4: liniowy dom podwójny"><img src="img/blizn-4-800.webp" width="800" height="444" loading="lazy" decoding="async" alt="liniowy dom podwójny, dom w zabudowie bliźniaczej, zdjęcie 4"></button></div>
+    <button class="ar ar-p" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 20 20"><path d="M12.5 4 6.5 10l6 6"/></svg></button>
+    <button class="ar ar-n" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 20 20"><path d="M7.5 4l6 6-6 6"/></svg></button>
+    <span class="cnt"><b>1</b> / 4</span>
+  </div>
+  <div class="pc-t">
+    <h3>liniowy dom podwójny</h3>
+    <p class="pc-typ">dom w zabudowie bliźniaczej</p>
+    <p class="pc-m"><span>podlaskie</span><span>projekt 2022</span><span>160 m<sup>2</sup></span></p>
+    <p class="pc-d">Wąska działka wyznaczyła podłużną bryłę, a sąsiednie domy podpowiedziały dach i materiały elewacji.</p>
+    <p class="pc-z">wielobranżowy projekt budowlano-wykonawczy</p>
+  </div>
+</article>
+<article class="pc" data-g="domy">
+  <div class="car" data-title="strefa relaksu">
+    <div class="track"><button class="sl" type="button" data-big="img/sauna-1-1600.webp" aria-label="Powiększ zdjęcie 1 z 4: strefa relaksu"><img src="img/sauna-1-800.webp" width="800" height="444" loading="lazy" decoding="async" alt="strefa relaksu, siłownia z sauną nad wodą, zdjęcie 1"></button><button class="sl" type="button" data-big="img/sauna-2-1600.webp" aria-label="Powiększ zdjęcie 2 z 4: strefa relaksu"><img src="img/sauna-2-800.webp" width="800" height="441" loading="lazy" decoding="async" alt="strefa relaksu, siłownia z sauną nad wodą, zdjęcie 2"></button><button class="sl" type="button" data-big="img/sauna-3-1600.webp" aria-label="Powiększ zdjęcie 3 z 4: strefa relaksu"><img src="img/sauna-3-800.webp" width="800" height="450" loading="lazy" decoding="async" alt="strefa relaksu, siłownia z sauną nad wodą, zdjęcie 3"></button><button class="sl" type="button" data-big="img/sauna-4-1600.webp" aria-label="Powiększ zdjęcie 4 z 4: strefa relaksu"><img src="img/sauna-4-800.webp" width="800" height="450" loading="lazy" decoding="async" alt="strefa relaksu, siłownia z sauną nad wodą, zdjęcie 4"></button></div>
+    <button class="ar ar-p" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 20 20"><path d="M12.5 4 6.5 10l6 6"/></svg></button>
+    <button class="ar ar-n" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 20 20"><path d="M7.5 4l6 6-6 6"/></svg></button>
+    <span class="cnt"><b>1</b> / 4</span>
+  </div>
+  <div class="pc-t">
+    <h3>strefa relaksu</h3>
+    <p class="pc-typ">siłownia z sauną nad wodą</p>
+    <p class="pc-m"><span>mazowieckie</span><span>projekt 2020</span><span>68 m<sup>2</sup></span></p>
+    <p class="pc-d">Pawilon nad stawem, którego forma i materiały nawiązują do pobliskiej rezydencji. Przeszklenia otwierają wnętrze na wodę.</p>
+    <p class="pc-z">projekt koncepcyjny, współpraca: Magdalena Posłuszna</p>
+  </div>
+</article>
+    </div>
+    <button class="btn btn-k more" id="more" type="button">Pokaż kolejne projekty <svg viewBox="0 0 20 20"><path d="M10 4v12M5 11l5 5 5-5"/></svg></button>
+  </div>
+  <div class="wide arch">
+    <div class="arch-h">
+      <div><h3>Pozostałe projekty</h3><p>Wnętrza, budynki i obiekty przemysłowe z portfolio pracowni.</p></div>
+      <div class="sarr"><button type="button" class="sp" aria-label="Przewiń w lewo"><svg viewBox="0 0 20 20"><path d="M12.5 4 6.5 10l6 6"/></svg></button><button type="button" class="sn" aria-label="Przewiń w prawo"><svg viewBox="0 0 20 20"><path d="M7.5 4l6 6-6 6"/></svg></button></div>
+    </div>
+    <div class="strip" id="strip">
+<button class="ac" type="button" data-big="img/a01-1400.webp" data-cap="funkcjonalna harmonia"><span class="ac-i"><img src="img/a01-600.webp" width="600" height="800" loading="lazy" decoding="async" alt="funkcjonalna harmonia, projekt wnętrz"></span><span class="ac-t">funkcjonalna harmonia</span><span class="ac-d">projekt wnętrz</span></button>
+<button class="ac" type="button" data-big="img/a02-1400.webp" data-cap="dom wśród drzew - wnętrza"><span class="ac-i"><img src="img/a02-600.webp" width="600" height="800" loading="lazy" decoding="async" alt="dom wśród drzew - wnętrza, projekt wnętrz"></span><span class="ac-t">dom wśród drzew - wnętrza</span><span class="ac-d">projekt wnętrz</span></button>
+<button class="ac" type="button" data-big="img/a03-1400.webp" data-cap="dom efektywny - wnętrza"><span class="ac-i"><img src="img/a03-600.webp" width="600" height="800" loading="lazy" decoding="async" alt="dom efektywny - wnętrza, projekt wnętrz"></span><span class="ac-t">dom efektywny - wnętrza</span><span class="ac-d">projekt wnętrz</span></button>
+<button class="ac" type="button" data-big="img/a04-1400.webp" data-cap="logiczna reaktywacja"><span class="ac-i"><img src="img/a04-600.webp" width="600" height="324" loading="lazy" decoding="async" alt="logiczna reaktywacja, projekt wnętrz"></span><span class="ac-t">logiczna reaktywacja</span><span class="ac-d">projekt wnętrz</span></button>
+<button class="ac" type="button" data-big="img/a05-1400.webp" data-cap="praktyczna elegancja"><span class="ac-i"><img src="img/a05-600.webp" width="600" height="324" loading="lazy" decoding="async" alt="praktyczna elegancja, projekt wnętrz"></span><span class="ac-t">praktyczna elegancja</span><span class="ac-d">projekt wnętrz</span></button>
+<button class="ac" type="button" data-big="img/a06-1400.webp" data-cap="przytulny minimalizm - realizacja"><span class="ac-i"><img src="img/a06-600.webp" width="600" height="399" loading="lazy" decoding="async" alt="przytulny minimalizm - realizacja, projekt wnętrz"></span><span class="ac-t">przytulny minimalizm - realizacja</span><span class="ac-d">projekt wnętrz</span></button>
+<button class="ac" type="button" data-big="img/a07-1400.webp" data-cap="przytulny minimalizm - taras"><span class="ac-i"><img src="img/a07-600.webp" width="600" height="445" loading="lazy" decoding="async" alt="przytulny minimalizm - taras, aranżacja tarasu"></span><span class="ac-t">przytulny minimalizm - taras</span><span class="ac-d">aranżacja tarasu</span></button>
+<button class="ac" type="button" data-big="img/a08-1400.webp" data-cap="industrialne flow"><span class="ac-i"><img src="img/a08-600.webp" width="600" height="324" loading="lazy" decoding="async" alt="industrialne flow, projekt wnętrz"></span><span class="ac-t">industrialne flow</span><span class="ac-d">projekt wnętrz</span></button>
+<button class="ac" type="button" data-big="img/a09-1400.webp" data-cap="biurowiec horyzontalny"><span class="ac-i"><img src="img/a09-600.webp" width="600" height="338" loading="lazy" decoding="async" alt="biurowiec horyzontalny, budynek biurowy"></span><span class="ac-t">biurowiec horyzontalny</span><span class="ac-d">budynek biurowy</span></button>
+<button class="ac" type="button" data-big="img/a10-1400.webp" data-cap="technologiczna funkcjonalność"><span class="ac-i"><img src="img/a10-600.webp" width="600" height="600" loading="lazy" decoding="async" alt="technologiczna funkcjonalność, budynek przemysłowy"></span><span class="ac-t">technologiczna funkcjonalność</span><span class="ac-d">budynek przemysłowy</span></button>
+<button class="ac" type="button" data-big="img/a11-1400.webp" data-cap="silosy magazynowe"><span class="ac-i"><img src="img/a11-600.webp" width="600" height="600" loading="lazy" decoding="async" alt="silosy magazynowe, obiekt przemysłowy"></span><span class="ac-t">silosy magazynowe</span><span class="ac-d">obiekt przemysłowy</span></button>
+<button class="ac" type="button" data-big="img/a12-1400.webp" data-cap="prywatna panorama"><span class="ac-i"><img src="img/a12-600.webp" width="600" height="338" loading="lazy" decoding="async" alt="prywatna panorama, budynek mieszkalny"></span><span class="ac-t">prywatna panorama</span><span class="ac-d">budynek mieszkalny</span></button>
+<button class="ac" type="button" data-big="img/a13-1400.webp" data-cap="mid century modern"><span class="ac-i"><img src="img/a13-600.webp" width="600" height="750" loading="lazy" decoding="async" alt="mid century modern, projekt wnętrz"></span><span class="ac-t">mid century modern</span><span class="ac-d">projekt wnętrz</span></button>
+<button class="ac" type="button" data-big="img/a14-1400.webp" data-cap="eteryczny alians"><span class="ac-i"><img src="img/a14-600.webp" width="600" height="324" loading="lazy" decoding="async" alt="eteryczny alians, projekt wnętrz"></span><span class="ac-t">eteryczny alians</span><span class="ac-d">projekt wnętrz</span></button>
+<button class="ac" type="button" data-big="img/a15-1400.webp" data-cap="compact living"><span class="ac-i"><img src="img/a15-600.webp" width="600" height="445" loading="lazy" decoding="async" alt="compact living, projekt wnętrz"></span><span class="ac-t">compact living</span><span class="ac-d">projekt wnętrz</span></button>
+<button class="ac" type="button" data-big="img/a16-1400.webp" data-cap="naturalna konsolidacja"><span class="ac-i"><img src="img/a16-600.webp" width="600" height="600" loading="lazy" decoding="async" alt="naturalna konsolidacja, projekt wnętrz"></span><span class="ac-t">naturalna konsolidacja</span><span class="ac-d">projekt wnętrz</span></button>
+<button class="ac" type="button" data-big="img/a17-1400.webp" data-cap="strefa relaksu - wnętrza"><span class="ac-i"><img src="img/a17-600.webp" width="600" height="600" loading="lazy" decoding="async" alt="strefa relaksu - wnętrza, projekt wnętrz"></span><span class="ac-t">strefa relaksu - wnętrza</span><span class="ac-d">projekt wnętrz</span></button>
+<button class="ac" type="button" data-big="img/a18-1400.webp" data-cap="endemiczny kunszt"><span class="ac-i"><img src="img/a18-600.webp" width="600" height="570" loading="lazy" decoding="async" alt="endemiczny kunszt, projekt wnętrz"></span><span class="ac-t">endemiczny kunszt</span><span class="ac-d">projekt wnętrz</span></button>
+<button class="ac" type="button" data-big="img/a19-1400.webp" data-cap="lokalny minimalizm"><span class="ac-i"><img src="img/a19-600.webp" width="600" height="900" loading="lazy" decoding="async" alt="lokalny minimalizm, projekt wnętrz"></span><span class="ac-t">lokalny minimalizm</span><span class="ac-d">projekt wnętrz</span></button>
+<button class="ac" type="button" data-big="img/a20-1400.webp" data-cap="oszczędny patchwork"><span class="ac-i"><img src="img/a20-600.webp" width="600" height="400" loading="lazy" decoding="async" alt="oszczędny patchwork, projekt wnętrz"></span><span class="ac-t">oszczędny patchwork</span><span class="ac-d">projekt wnętrz</span></button>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark" id="pracownia">
+  <svg class="dk-w" viewBox="-40 0 600 520" aria-hidden="true"><path d="M4 60H121L162 224 201 89H311L350 224 391 60H508V288H421L386 465H295L256 324 217 465H126L91 288H4Z"/><line x1="4" y1="20" x2="508" y2="20"/><line x1="4" y1="10" x2="4" y2="30"/><line x1="508" y1="10" x2="508" y2="30"/><line x1="-20" y1="60" x2="-20" y2="465"/><line x1="-30" y1="60" x2="-10" y2="60"/><line x1="-30" y1="465" x2="-10" y2="465"/></svg>
+  <div class="wrap">
+    <div class="dk">
+      <div>
+        <div class="hrow"><h2>Jeden zespół od koncepcji do budowy</h2></div>
+        <p class="p1">Projekty wielobranżowe prowadzimy razem z projektantami konstrukcji, instalacji sanitarnych i elektrycznych oraz rzeczoznawcami sanitarnymi, BHP i ppoż. Inwestor ma jeden kontakt, a dokumentacja jest spójna między branżami.</p>
+        <ul class="steps">
+          <li><b>Analiza działki</b><span>warunki zabudowy, sąsiedztwo, możliwa skala inwestycji</span></li>
+          <li><b>Koncepcja</b><span>układ funkcji, bryła i wizualizacje do decyzji</span></li>
+          <li><b>Projekt budowlany i wykonawczy</b><span>komplet branż, projekt techniczny</span></li>
+          <li><b>Projekt wnętrz</b><span>materiały, zabudowy, oświetlenie</span></li>
+        </ul>
+        <p class="inw">Projektowaliśmy m.in. dla: <b>Bogucki Folie, Piekarnia Oskroba, Polimergraf, Urząd Miasta Otwocka</b> oraz inwestorów prywatnych.</p>
+      </div>
+      <figure class="dk-img">
+        <img src="img/bf-sq-900.webp" width="900" height="900" loading="lazy" decoding="async" alt="Szklana fasada biurowca BF w Jatnem">
+        <figcaption>biurowiec BF, Jatne</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="kontakt">
+  <div class="wrap">
+    <div class="hrow"><h2>Kontakt</h2><span class="rule"><svg viewBox="0 56 512 413" aria-hidden="true"><path d="M4 60H121L162 224 201 89H311L350 224 391 60H508V288H421L386 465H295L256 324 217 465H126L91 288H4Z"/></svg></span></div>
+    <div class="kt">
+      <div class="kd">
+        <dl>
+          <div><dt>Telefon</dt><dd><a href="tel:+48506570881">+48 506 570 881</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:biuro@wsna.pl">biuro@wsna.pl</a></dd></div>
+          <div><dt>Biuro projektowe</dt><dd>ul. Spacerowa 20a/19<br>00-592 Warszawa</dd></div>
+          <div><dt>Siedziba</dt><dd>ul. Przeworska 5a/69<br>04-382 Warszawa</dd></div>
+        </dl>
+        <div class="map" id="map" data-src="https://www.google.com/maps?q=Spacerowa+20a,+00-592+Warszawa&amp;output=embed"><span>Mapa: ul. Spacerowa 20a, Warszawa</span></div>
+      </div>
+      <form id="form" novalidate>
+        <div class="f"><label for="f1">Imię i nazwisko</label><input id="f1" name="imie" autocomplete="name"></div>
+        <div class="f"><label for="f2">Telefon</label><input id="f2" name="tel" type="tel" autocomplete="tel"></div>
+        <div class="f full"><label for="f3">E-mail</label><input id="f3" name="email" type="email" autocomplete="email"></div>
+        <div class="f"><label for="f4">Czego dotyczy projekt</label><select id="f4" name="typ"><option>Dom</option><option>Biurowiec lub obiekt przemysłowy</option><option>Wnętrze</option><option>Analiza działki</option><option>Inne</option></select></div>
+        <div class="f"><label for="f5">Lokalizacja</label><input id="f5" name="miejsce" placeholder="np. Piaseczno"></div>
+        <div class="f full"><label for="f6">Kilka słów o inwestycji</label><textarea id="f6" name="opis" placeholder="Powierzchnia, etap (działka, koncepcja, budowa), termin"></textarea></div>
+        <label class="zg"><input type="checkbox" name="zgoda">Zgadzam się na przetwarzanie moich danych przez WIOSNA ARCHITEKCI Sp. z o.o. w celu odpowiedzi na zapytanie.</label>
+        <div class="fsend"><button class="btn btn-k" type="submit">Wyślij zapytanie <svg viewBox="0 0 20 20"><path d="M4 10h12M11 5l5 5-5 5"/></svg></button><p class="fmsg" id="fmsg" role="status"></p></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-g">
+      <div>
+        <a class="logo" href="#top" aria-label="WIOSNA ARCHITEKCI"><svg viewBox="0 56 512 413" aria-hidden="true"><path d="M4 60H121L162 224 201 89H311L350 224 391 60H508V288H421L386 465H295L256 324 217 465H126L91 288H4Z"/></svg><span><b>WIOSNA</b><i>ARCHITEKCI</i></span></a>
+        <p style="margin-top:18px;max-width:22em">Architektura, urbanistyka i&nbsp;wnętrza.</p>
+      </div>
+      <div><h4>Biuro projektowe</h4><p>ul. Spacerowa 20a/19<br>00-592 Warszawa</p></div>
+      <div><h4>Kontakt</h4><p><a href="tel:+48506570881">+48 506 570 881</a><br><a href="mailto:biuro@wsna.pl">biuro@wsna.pl</a></p></div>
+      <div><h4>Strona</h4><nav aria-label="Stopka"><a href="#projekty">Projekty</a><a href="#zakres">Zakres</a><a href="#pracownia">Pracownia</a><a href="#kontakt">Kontakt</a></nav></div>
+    </div>
+    <div class="ft-b">
+      <span>© 2026 WIOSNA ARCHITEKCI Sp. z o.o. · siedziba: ul. Przeworska 5a/69, 04-382 Warszawa · <a href="#">Polityka prywatności</a></span>
+      <a class="wylinka-badge" href="https://wylinka.pl/?utm_source=wsna.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a>
+    </div>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
+  <img id="lbi" alt="">
+  <button class="x" type="button" aria-label="Zamknij"><svg viewBox="0 0 20 20"><path d="M4 4l12 12M16 4 4 16"/></svg></button>
+  <button class="lp" type="button" aria-label="Poprzednie"><svg viewBox="0 0 20 20"><path d="M12.5 4 6.5 10l6 6"/></svg></button>
+  <button class="ln" type="button" aria-label="Następne"><svg viewBox="0 0 20 20"><path d="M7.5 4l6 6-6 6"/></svg></button>
+  <p class="lb-cap" id="lbc"></p>
+</div>
+
+<script>
+(function(){
+var d=document,hdr=d.getElementById('hdr'),b=d.body;
+function sc(){hdr.classList.toggle('solid',scrollY>40&&!b.classList.contains('menu-open'))}
+addEventListener('scroll',sc,{passive:true});sc();
+var bg=d.getElementById('burger');
+bg.addEventListener('click',function(){var o=b.classList.toggle('menu-open');bg.setAttribute('aria-expanded',o);bg.setAttribute('aria-label',o?'Zamknij menu':'Otwórz menu');sc()});
+d.querySelectorAll('#nav a').forEach(function(a){a.addEventListener('click',function(){b.classList.remove('menu-open');bg.setAttribute('aria-expanded','false');sc()})});
+
+/* przeciąganie myszą + blokada kliknięcia po przeciągnięciu */
+function dragify(el){
+  var down=false,x0=0,s0=0,moved=false;
+  el.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;down=true;moved=false;x0=e.clientX;s0=el.scrollLeft});
+  addEventListener('pointermove',function(e){if(!down)return;var dx=e.clientX-x0;if(Math.abs(dx)>5){moved=true;el.classList.add('drag')}if(moved)el.scrollLeft=s0-dx});
+  addEventListener('pointerup',function(){if(!down)return;down=false;if(moved){var w=el.firstElementChild.getBoundingClientRect().width+parseFloat(getComputedStyle(el).columnGap||0);var t=Math.round(el.scrollLeft/w)*w;el.classList.remove('drag');el.scrollTo({left:t,behavior:'smooth'})}});
+  el.addEventListener('click',function(e){if(moved){e.preventDefault();e.stopPropagation();moved=false}},true);
+}
+/* karuzele w kartach */
+d.querySelectorAll('.car').forEach(function(c){
+  var t=c.querySelector('.track'),n=t.children.length,cnt=c.querySelector('.cnt b'),p=c.querySelector('.ar-p'),nx=c.querySelector('.ar-n');
+  function idx(){return Math.round(t.scrollLeft/t.clientWidth)}
+  function upd(){var i=idx();cnt.textContent=i+1;p.disabled=i<=0;nx.disabled=i>=n-1}
+  t.addEventListener('scroll',function(){requestAnimationFrame(upd)},{passive:true});
+  p.addEventListener('click',function(){t.scrollTo({left:(idx()-1)*t.clientWidth,behavior:'smooth'})});
+  nx.addEventListener('click',function(){t.scrollTo({left:(idx()+1)*t.clientWidth,behavior:'smooth'})});
+  dragify(t);upd();
+});
+/* pas pozostałych projektów */
+var st=d.getElementById('strip'),sp=d.querySelector('.sarr .sp'),sn=d.querySelector('.sarr .sn');
+function step(){return st.firstElementChild.getBoundingClientRect().width+20}
+function su(){sp.disabled=st.scrollLeft<4;sn.disabled=st.scrollLeft>st.scrollWidth-st.clientWidth-4}
+st.addEventListener('scroll',function(){requestAnimationFrame(su)},{passive:true});
+sp.addEventListener('click',function(){st.scrollBy({left:-step(),behavior:'smooth'})});
+sn.addEventListener('click',function(){st.scrollBy({left:step(),behavior:'smooth'})});
+dragify(st);su();addEventListener('resize',su);
+/* filtr */
+var fb=d.querySelectorAll('.filt button');
+fb.forEach(function(x){x.addEventListener('click',function(){
+  fb.forEach(function(y){y.setAttribute('aria-pressed',y===x)});
+  var f=x.dataset.f;d.querySelectorAll('.pc').forEach(function(pc){pc.hidden=!(f==='all'||pc.dataset.g===f)});
+  d.querySelectorAll('.pc .track').forEach(function(t){t.dispatchEvent(new Event('scroll'))});
+})});
+var mo=d.getElementById('more');mo.addEventListener('click',function(){d.getElementById('grid').classList.add('all');mo.remove()});
+/* lightbox */
+var lb=d.getElementById('lb'),li=d.getElementById('lbi'),lc=d.getElementById('lbc'),G=[],I=0,last;
+function show(){var e=G[I],im=e.querySelector('img');li.src=im.currentSrc||im.src;li.alt=im.alt;lc.textContent=(e.dataset.cap||e.closest('.car')&&e.closest('.car').dataset.title||'')+'  ·  '+(I+1)+' / '+G.length;
+  var big=new Image();big.onload=function(){if(G[I]===e)li.src=big.src};setTimeout(function(){big.src=e.dataset.big},150);
+  var nx=G[(I+1)%G.length];if(nx&&'requestIdleCallback' in window)requestIdleCallback(function(){(new Image()).src=nx.dataset.big})}
+function open(e){var g=e.closest('.track')||e.closest('.strip');G=[].slice.call(g.children);I=G.indexOf(e);last=e;show();lb.classList.add('on');b.style.overflow='hidden';lb.querySelector('.x').focus()}
+function close(){lb.classList.remove('on');b.style.overflow='';li.removeAttribute('src');if(last)last.focus()}
+function go(k){I=(I+k+G.length)%G.length;show()}
+d.querySelectorAll('.sl,.ac').forEach(function(e){e.addEventListener('click',function(){open(e)})});
+lb.querySelector('.x').addEventListener('click',close);
+lb.querySelector('.lp').addEventListener('click',function(){go(-1)});
+lb.querySelector('.ln').addEventListener('click',function(){go(1)});
+lb.addEventListener('click',function(e){if(e.target===lb)close()});
+addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')go(-1);if(e.key==='ArrowRight')go(1)});
+var tx=null;lb.addEventListener('touchstart',function(e){tx=e.touches[0].clientX},{passive:true});
+lb.addEventListener('touchend',function(e){if(tx===null)return;var dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>45)go(dx<0?1:-1);tx=null});
+/* mapa przy przewinięciu */
+var m=d.getElementById('map');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){var f=d.createElement('iframe');f.src=m.dataset.src;f.title='Mapa dojazdu: ul. Spacerowa 20a, Warszawa';f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';m.appendChild(f);io.disconnect()}},{rootMargin:'300px'});io.observe(m)}
+/* formularz pokazowy */
+d.getElementById('form').addEventListener('submit',function(e){e.preventDefault();d.getElementById('fmsg').textContent='To podgląd strony - formularz zacznie wysyłać zapytania na docelowej stronie.'});
+})();
+</script>
+</body>
+</html>
